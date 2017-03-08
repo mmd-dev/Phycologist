@@ -13,7 +13,7 @@ protocol FaceViewDataSource: class {
 }
 
 @IBDesignable
-class FaceView: UIView
+class FaceView: UIView //为什么这里不需要写协议？
 {
     @IBInspectable
     var lineWidth: CGFloat = 3 { didSet {setNeedsDisplay() } }
@@ -49,14 +49,18 @@ class FaceView: UIView
         facePath.lineWidth = lineWidth
         color.set()
         facePath.stroke()
+        print("drawface")
         
         bezierPathForEye(whichEye: .Left).stroke()
         bezierPathForEye(whichEye: .Right).stroke()
+        print("draweye")
         
         let smiliness = dataSouce?.smilinessForFaceView(sender: self) ?? 0.0
+        print("\(smiliness)")
+        //self是FaceView？
         let smilePath = bezierPathForSmile(fractionOfMaxSmile: smiliness)
         smilePath.stroke()
-        
+        print("drawsmile")
     }
         
     

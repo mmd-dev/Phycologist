@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA3126841E6FB58C00EE96A0 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3126821E6FB58C00EE96A0 /* FaceView.swift */; };
 		BA3126851E6FB58C00EE96A0 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3126831E6FB58C00EE96A0 /* HappinessViewController.swift */; };
+		BA3126871E6FEFA800EE96A0 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3126861E6FEFA800EE96A0 /* TextViewController.swift */; };
+		BA3126891E6FF37C00EE96A0 /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3126881E6FF37C00EE96A0 /* DiagnosedHappinessViewController.swift */; };
 		BAEAB0C81E6EFC5900D5B910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEAB0C71E6EFC5900D5B910 /* AppDelegate.swift */; };
 		BAEAB0CA1E6EFC5900D5B910 /* PhycologistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEAB0C91E6EFC5900D5B910 /* PhycologistViewController.swift */; };
 		BAEAB0CD1E6EFC5900D5B910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEAB0CB1E6EFC5900D5B910 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		BA3126821E6FB58C00EE96A0 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		BA3126831E6FB58C00EE96A0 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		BA3126861E6FEFA800EE96A0 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewController.swift; path = ../TextViewController.swift; sourceTree = "<group>"; };
+		BA3126881E6FF37C00EE96A0 /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 		BAEAB0C41E6EFC5900D5B910 /* Phychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEAB0C71E6EFC5900D5B910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAEAB0C91E6EFC5900D5B910 /* PhycologistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhycologistViewController.swift; sourceTree = "<group>"; };
@@ -58,11 +62,13 @@
 		BAEAB0C61E6EFC5900D5B910 /* Phychologist */ = {
 			isa = PBXGroup;
 			children = (
+				BA3126861E6FEFA800EE96A0 /* TextViewController.swift */,
 				BAEAB0C71E6EFC5900D5B910 /* AppDelegate.swift */,
 				BA3126821E6FB58C00EE96A0 /* FaceView.swift */,
 				BA3126831E6FB58C00EE96A0 /* HappinessViewController.swift */,
 				BAEAB0C91E6EFC5900D5B910 /* PhycologistViewController.swift */,
 				BAEAB0CB1E6EFC5900D5B910 /* Main.storyboard */,
+				BA3126881E6FF37C00EE96A0 /* DiagnosedHappinessViewController.swift */,
 				BAEAB0CE1E6EFC5900D5B910 /* Assets.xcassets */,
 				BAEAB0D01E6EFC5900D5B910 /* LaunchScreen.storyboard */,
 				BAEAB0D31E6EFC5900D5B910 /* Info.plist */,
@@ -143,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3126891E6FF37C00EE96A0 /* DiagnosedHappinessViewController.swift in Sources */,
+				BA3126871E6FEFA800EE96A0 /* TextViewController.swift in Sources */,
 				BAEAB0CA1E6EFC5900D5B910 /* PhycologistViewController.swift in Sources */,
 				BAEAB0C81E6EFC5900D5B910 /* AppDelegate.swift in Sources */,
 				BA3126851E6FB58C00EE96A0 /* HappinessViewController.swift in Sources */,
