@@ -23,6 +23,12 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         faceView?.setNeedsDisplay()
         print("updateUI()")
         //这里的问号干吗用，老师说了没听懂，如果不放的话会crash，但是我不懂原理
+        
+        // 解答：
+        // ❓问号，表示这个faceView在这边可能是空的，如果你不写的话，那么就认为他一定不是空的，
+        // 要记住，这些判断时发生在【编译时】，至于什么是编译时，你可以简单的理解为，按了command+B的时候就是编译时
+        // 但是，在【运行时】的时候，如果你不加问号，那么一旦faceView是nil，那么执行到
+        // 这句faceView.setNeedsDisplay()的时候，程序必然会crash
         title = "\(happiness)"
     }
     
