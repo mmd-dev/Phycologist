@@ -37,7 +37,12 @@ class PhycologistViewController: UIViewController
             }
         }
     }
-    init (code aDecoder: NSCoder)
+
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     
     override func awakeFromNib() {
         NSLog("awakeFromNib")
@@ -73,6 +78,10 @@ class PhycologistViewController: UIViewController
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         NSLog("viewWillTransitionToSize")
-        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in self.NSLog("viewWillTransitionToSize") }, completion: { context -> Void in self.NSLog("viewWillTransitionToSize") } )
+        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+            NSLog("viewWillTransitionToSize")
+        }, completion: { context -> Void in
+            NSLog("viewWillTransitionToSize")
+        })
     }
 }
