@@ -37,9 +37,41 @@ class PhycologistViewController: UIViewController
             }
         }
     }
-   
+    init (code aDecoder: NSCoder)
+    override func awakeFromNib() {
+        NSLog("awakeFromNib")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("viewDidLoad()")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NSLog("viewWillApear(animated = \(animated))")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NSLog("viewDidApear(animated = \(animated))")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSLog("viewWillApear(animated = \(animated))")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSLog("viewDidApear(animated = \(animated))")
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        NSLog("viewWillLayoutSubviews() bounds.size = \(view.bounds.size)")
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        NSLog("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        NSLog("viewWillTransitionToSize")
+        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in self.NSLog("viewWillTransitionToSize") }, completion: { context -> Void in self.NSLog("viewWillTransitionToSize") } )
     }
 }
