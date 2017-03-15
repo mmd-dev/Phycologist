@@ -40,6 +40,6 @@ class PhycologistViewController: UIViewController
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        logVCL("viewDidLoad()")
+        NSLog("viewDidLoad()")
     }
 }
