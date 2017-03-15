@@ -14,6 +14,9 @@ protocol FaceViewDataSource: class {
 
 @IBDesignable
 class FaceView: UIView //为什么这里不需要写协议？
+// 解答：
+// 因为如果这边写了协议，就是表示FaceView实现了FaceViewDataSource这个协议，那么在给faceView.dataSource赋值的时候
+// 就会发生 faceView.dataSource = <...> 这里的<...>可能就必须是FaceView类的实例了噢
 {
     @IBInspectable
     var lineWidth: CGFloat = 3 { didSet {setNeedsDisplay() } }
