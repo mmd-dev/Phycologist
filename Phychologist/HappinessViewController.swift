@@ -11,6 +11,7 @@ import UIKit
 class HappinessViewController: UIViewController, FaceViewDataSource
 {
     var happiness: Int = 25 { //0 = very sad, 100 = estatic
+    
         didSet{
             happiness = min(max(happiness, 0), 100)
             print("happiness = \(happiness)")
@@ -69,7 +70,6 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         didSet{
             //didset不懂
             faceView.dataSouce = self
-            //表示把自己当做代理？传入FaceView，返回Double？
             print("faceView.dataSouce = self")
             faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: #selector(FaceView.scale(gesture:))))
             print("Pinch")

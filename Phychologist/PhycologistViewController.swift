@@ -13,12 +13,15 @@ class PhycologistViewController: UIViewController
     
     @IBAction func nothing(_ sender: UIButton) {
         performSegue(withIdentifier: "nothing", sender: nil)
+        //sender： nil是啥，老实说这里是啥都行……懵逼脸
     }
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
         var destination = segue.destination as? UIViewController
+        //为啥destination既是UIViewController又是UINavigationController？
         if let navCon = destination as? UINavigationController {
             destination = navCon.visibleViewController
         }
@@ -36,4 +39,3 @@ class PhycologistViewController: UIViewController
     }
    
 }
-
