@@ -38,6 +38,7 @@ class PhycologistViewController: UIViewController
         }
     }
     init (code aDecoder: NSCoder)
+    
     override func awakeFromNib() {
         NSLog("awakeFromNib")
     }
